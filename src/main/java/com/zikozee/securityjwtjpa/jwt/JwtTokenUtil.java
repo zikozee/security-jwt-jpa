@@ -79,7 +79,7 @@ public class JwtTokenUtil implements Serializable {
         try{
             final Date now = Calendar.getInstance().getTime();
             final Date expiration = getExpirationDateFromToken(token);
-            return !expiration.before(now);
+            return expiration.before(now);
         }catch (ExpiredJwtException e){
             return true;
         }
@@ -94,9 +94,11 @@ public class JwtTokenUtil implements Serializable {
 //        final Date expirationDate = java.sql.Date.valueOf(LocalDate.now().plusDays(jwtConfig.getTokenExpirationAfterDays()));
         final Date expirationDate = calendar.getTime();
 
-
-
+        //get claims before invalidating
         final Claims claims = getAllClaimsFromToken(token);
+        //invalidate previous token
+        this.invalidateToken(token);
+
         claims.setIssuedAt(createdDate);
         claims.setExpiration(expirationDate);
         return Jwts.builder()
