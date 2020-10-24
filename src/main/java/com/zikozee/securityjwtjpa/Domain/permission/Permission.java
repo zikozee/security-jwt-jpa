@@ -1,5 +1,6 @@
-package com.zikozee.securityjwtjpa.Domain;
+package com.zikozee.securityjwtjpa.Domain.permission;
 
+import com.zikozee.securityjwtjpa.Domain.role.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,8 @@
-package com.zikozee.securityjwtjpa.student;
+package com.zikozee.securityjwtjpa.controller.student;
 
-import com.zikozee.securityjwtjpa.student.dtos.CreateStudentDTO;
-import com.zikozee.securityjwtjpa.student.dtos.QueryStudentDTO;
-import com.zikozee.securityjwtjpa.student.dtos.UpdateStudentDTO;
+import com.zikozee.securityjwtjpa.controller.student.dtos.CreateStudentDTO;
+import com.zikozee.securityjwtjpa.controller.student.dtos.QueryStudentDTO;
+import com.zikozee.securityjwtjpa.controller.student.dtos.UpdateStudentDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;

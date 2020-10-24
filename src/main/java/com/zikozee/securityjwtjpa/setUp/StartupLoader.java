@@ -1,9 +1,9 @@
 package com.zikozee.securityjwtjpa.setUp;
 
 import com.google.common.collect.Sets;
-import com.zikozee.securityjwtjpa.Domain.Permission;
-import com.zikozee.securityjwtjpa.Domain.Role;
-import com.zikozee.securityjwtjpa.Domain.User;
+import com.zikozee.securityjwtjpa.Domain.permission.Permission;
+import com.zikozee.securityjwtjpa.Domain.role.Role;
+import com.zikozee.securityjwtjpa.Domain.user.User;
 import com.zikozee.securityjwtjpa.repo.PermissionRepository;
 import com.zikozee.securityjwtjpa.repo.RoleRepository;
 import com.zikozee.securityjwtjpa.repo.UserRepository;
@@ -101,6 +101,7 @@ public class StartupLoader implements CommandLineRunner {
             user.setEnabled(true);
             user.setActivated(true);
             user.setAccountExpired(false);
+
         }
         user.setRoles(roles);
         user = userRepository.save(user);

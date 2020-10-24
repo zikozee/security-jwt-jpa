@@ -1,6 +1,6 @@
 package com.zikozee.securityjwtjpa.repo;
 
-import com.zikozee.securityjwtjpa.Domain.User;
+import com.zikozee.securityjwtjpa.Domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

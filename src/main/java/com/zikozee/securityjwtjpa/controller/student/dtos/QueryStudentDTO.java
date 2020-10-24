@@ -1,7 +1,6 @@
-package com.zikozee.securityjwtjpa.student.dtos;
+package com.zikozee.securityjwtjpa.controller.student.dtos;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

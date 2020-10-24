@@ -1,6 +1,6 @@
-package com.zikozee.securityjwtjpa.admin;
+package com.zikozee.securityjwtjpa.controller.admin;
 
-import com.zikozee.securityjwtjpa.service.UserService;
+import com.zikozee.securityjwtjpa.Domain.user.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;

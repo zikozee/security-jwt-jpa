@@ -1,5 +1,7 @@
-package com.zikozee.securityjwtjpa.Domain;
+package com.zikozee.securityjwtjpa.Domain.user;
 
+import com.zikozee.securityjwtjpa.Domain.role.Role;
+import com.zikozee.securityjwtjpa.Domain.token.Token;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -39,6 +41,10 @@ public class User {
 
     @Column(nullable = false)
     private boolean deleted;
+
+    //Implementing with a shared primary key
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Token token;
 
 
 

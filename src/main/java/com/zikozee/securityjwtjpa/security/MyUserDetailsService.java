@@ -1,9 +1,9 @@
 package com.zikozee.securityjwtjpa.security;
 
-import com.zikozee.securityjwtjpa.Domain.Permission;
-import com.zikozee.securityjwtjpa.Domain.Role;
-import com.zikozee.securityjwtjpa.Domain.User;
-import com.zikozee.securityjwtjpa.service.UserService;
+import com.zikozee.securityjwtjpa.Domain.permission.Permission;
+import com.zikozee.securityjwtjpa.Domain.role.Role;
+import com.zikozee.securityjwtjpa.Domain.user.User;
+import com.zikozee.securityjwtjpa.Domain.user.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.GrantedAuthority;

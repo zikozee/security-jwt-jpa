@@ -1,4 +1,4 @@
-package com.zikozee.securityjwtjpa.student;
+package com.zikozee.securityjwtjpa.controller.student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

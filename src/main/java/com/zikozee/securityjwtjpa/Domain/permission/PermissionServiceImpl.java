@@ -1,14 +1,15 @@
-package com.zikozee.securityjwtjpa.service;
+package com.zikozee.securityjwtjpa.Domain.permission;
 
+import com.zikozee.securityjwtjpa.Domain.permission.PermissionService;
 import com.zikozee.securityjwtjpa.Exceptions.PermissionNotFoundException;
-import com.zikozee.securityjwtjpa.Domain.Permission;
+import com.zikozee.securityjwtjpa.Domain.permission.Permission;
 import com.zikozee.securityjwtjpa.repo.PermissionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
-public class PermissionServiceImpl implements PermissionService{
+public class PermissionServiceImpl implements PermissionService {
     private final PermissionRepository permissionRepository;
 
     @Override

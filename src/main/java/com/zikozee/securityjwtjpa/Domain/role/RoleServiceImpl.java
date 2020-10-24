@@ -1,7 +1,6 @@
-package com.zikozee.securityjwtjpa.service;
+package com.zikozee.securityjwtjpa.Domain.role;
 
 import com.zikozee.securityjwtjpa.Exceptions.UserRoleNotFoundException;
-import com.zikozee.securityjwtjpa.Domain.Role;
 import com.zikozee.securityjwtjpa.repo.RoleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

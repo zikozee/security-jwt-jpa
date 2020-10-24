@@ -1,20 +1,22 @@
-package com.zikozee.securityjwtjpa.service;
+package com.zikozee.securityjwtjpa.Domain.user;
 
 import com.zikozee.securityjwtjpa.Exceptions.UserNotFoundException;
-import com.zikozee.securityjwtjpa.Domain.User;
 import com.zikozee.securityjwtjpa.repo.UserRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @RequiredArgsConstructor
 @Service
 public class UserServiceImpl implements UserService{
+
     private final UserRepository userRepository;
 
     @Override
     public User findByUsername(String username) {
-        boolean userExists = userRepository.existsByUsername(username);
-        if(!userExists) throw new UserNotFoundException("User with username: " + username + " not found");
+
+        if(!this.userExists(username)) throw new UserNotFoundException("User with username: " + username + " not found");
         return userRepository.findByUsername(username);
     }
 
@@ -26,5 +28,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public void deleteById(Long adminId) {
         userRepository.deleteById(adminId);
+    }
+
+    @Override
+    public boolean userExists(String username) {
+        return userRepository.existsByUsername(username);
     }
 }

@@ -1,6 +1,6 @@
-package com.zikozee.securityjwtjpa.service;
+package com.zikozee.securityjwtjpa.Domain.permission;
 
-import com.zikozee.securityjwtjpa.Domain.Permission;
+import com.zikozee.securityjwtjpa.Domain.permission.Permission;
 
 public interface PermissionService {
     Permission findByName(String name);

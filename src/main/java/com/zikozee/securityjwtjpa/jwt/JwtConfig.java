@@ -5,6 +5,7 @@ import com.google.common.net.HttpHeaders;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,7 +16,10 @@ public class JwtConfig {
 
     private String secretKey;
     private String tokenPrefix;
-    private Integer tokenExpirationAfterDays;
+//    private Integer tokenExpirationAfterDays;
+    @Value("${application.jwt.tokenExpirationAfterSeconds}")
+    private Integer tokenExpirationAfterSeconds;
+
 
     public String getAuthorizationHeader(){
         return HttpHeaders.AUTHORIZATION;
