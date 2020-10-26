@@ -48,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated();
 
         http
-                .addFilterBefore(jwtTokenVerifier, UsernamePasswordAuthenticationFilter.class);//setting the order since filter request orderis not guaranteed
+                .addFilterBefore(jwtTokenVerifier, UsernamePasswordAuthenticationFilter.class);//setting the order since filter request order is not guaranteed
 
 
 

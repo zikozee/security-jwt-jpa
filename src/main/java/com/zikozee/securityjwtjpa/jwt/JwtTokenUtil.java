@@ -1,6 +1,5 @@
 package com.zikozee.securityjwtjpa.jwt;
 
-import com.zikozee.securityjwtjpa.Exceptions.AuthenticationException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.*;
 
 import java.util.function.Function;
